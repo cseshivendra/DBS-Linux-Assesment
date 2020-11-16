@@ -1,0 +1,35 @@
+1) cat > file.txt
+ubuntu fedora suse linuxmint
+
+awk '{n=split($0,a," "); for (i=0;i<=n;i++){ if(a[i]=="fedora"){ print i}} }'
+
+2) 
+#! /bin/bash
+
+$(grep -n bank $1 | cat >> filetmp.txt)
+$(sed  -n 's/bank/BANKS/p' $1 | cat >> filetmp.txt)
+
+$(cat filetmp.txt | cat >> $1)
+
+3)
+sed -n '$    p' file1.txt | awk '{ print length}'
+here we can specify line number instead of $
+
+
+4)
+#! /bin/bash
+
+echo "enter string:"
+read  b
+echo "enter character:"
+read a
+
+awk -v ch="$a" -v s="$b" 'BEGIN{print index(s,ch)}' 
+
+5)
+
+installing mysql:
+sudo apt-get install mysql-server
+connecting to mysql:
+mysql -u root -p 
+

@@ -1,0 +1,23 @@
+1.what is shared and unbindable mountpoints linux?
+Mount points
+Ans - A mount point is simply a directory, like any other, that is created as part of the root filesystem. So, for example, the home filesystem is mounted on the directory /home. Filesystems can be mounted at mount points on other non-root filesystems but this is less common.
+Shared 
+Ans - A shared mountpoint may be replicated as many times as needed, and each copy will continue to be the exact same. Other mount points that appear under a shared mount point in some subdirectory will appear in all the other replicated mount points as it is.
+Unbindable
+Ans - An unbindable mount point, which by definition is also private, cannot be replicated elsewhere through the use of the bind flag of the mount system call or command.
+2. Create a dir ..... ?
+Ans 2 -     grep -or "bank" dir1 | wc -l
+
+3.what is the command to continuosly monitor the log file for a service in running state?
+Ans 3-   tail -F $LOGFILE
+where $LOGFILE is an environment variable corresponding to the path to the log file to be monitored.
+4.what is Shell in Unix? Linux? Is Bash the only shell in Unix/Linux?
+Ans 4 - The shell is the command interpretor in an operating system such as Unix or GNU/Linux, it is a program that executes other programs. It provides a computer user an interface to the Unix/GNU Linux system so that the user can run different commands or utilities/tools with some input data.
+-->Today, Bash is the default user shell on most Linux installations. Although Bash is just one of several well known UNIX shells, its wide distribution with Linux makes it an important tool to know.
+--> There are several shells such as bash, sh, ksh, zsh, fish.
+
+5.Command to print the name of the shell in which we work ?
+Ans. 5
+ ps -p $$ – Display your current shell name reliably.
+- echo "$SHELL" – Display the shell for the current user but not necessarily the shell that is running at the movement.
+- echo $0 – Another reliable and simple method to get the current shell interpreter name on Linux or Unix-like systems.
